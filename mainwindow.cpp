@@ -70,8 +70,13 @@ void MainWindow::on_history_button_clicked()
         QString text;
         if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
             QTextStream in(&file);
-            text = in.readAll();
-            ui->text_content->setPlainText(text);
+
+            while (!file.atEnd()){
+                text = in.readLine();
+                ui->text_content->setPlainText(text);
+            }
+//            text = in.readAll();
+
             QTextCursor cursor = ui->text_content->textCursor();
             cursor.movePosition(QTextCursor::End);
             ui->text_content->setTextCursor(cursor);
