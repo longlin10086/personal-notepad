@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QFile>
 #include <QFocusEvent>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -89,4 +90,12 @@ void MainWindow::on_actionpen_triggered(){
 
 void MainWindow::on_actioneraser_triggered(){
     on_eraser_button_clicked();
+}
+
+void MainWindow::on_actionshow_more_details_triggered(){
+    qDebug() << "-------------------";
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("Setting");
+    msgBox.setText("Wait for more development");
+    msgBox.exec();
 }

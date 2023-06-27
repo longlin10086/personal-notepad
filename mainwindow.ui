@@ -111,7 +111,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuStart">
@@ -133,6 +133,7 @@
     <property name="title">
      <string>Setting</string>
     </property>
+    <addaction name="actionshow_more_details"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -165,42 +166,14 @@
     <string>erease</string>
    </property>
   </action>
+  <action name="actionshow_more_details">
+   <property name="text">
+    <string>show more details</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="image.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>actionpen</sender>
-   <signal>triggered()</signal>
-   <receiver>pen_button</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>210</x>
-     <y>43</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionerease</sender>
-   <signal>triggered()</signal>
-   <receiver>text_content</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>317</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

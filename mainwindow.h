@@ -33,6 +33,8 @@ private slots:
 
     void on_actioneraser_triggered();
 
+    void on_actionshow_more_details_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
