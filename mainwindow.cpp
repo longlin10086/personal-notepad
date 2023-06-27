@@ -25,7 +25,7 @@ void MainWindow::on_save_button_clicked()
 {
     QString text = ui->text_content->toPlainText();
 //    qDebug() << text;
-    QFile file("D:\\Documents\\qt project\\notepad_v1\\data.txt");
+    QFile file("data.txt");
     if(!file.open(QIODevice::ReadWrite | QIODevice::Text)){
 //        qDebug() << text << "\n";
         return ;
@@ -65,7 +65,7 @@ void MainWindow::on_eraser_button_clicked()
 void MainWindow::on_history_button_clicked()
 {
     if(!ui->text_content->isReadOnly()){
-        QFile file("D:\\Documents\\qt project\\notepad_v1\\data.txt");
+        QFile file("data.txt");
         QString text;
         if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
             QTextStream in(&file);
