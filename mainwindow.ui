@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="save_button">
+          <property name="font">
+           <font>
+            <family>SansSerif</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>save</string>
+          </property>
+          <property name="icon">
+           <iconset resource="image.qrc">
+            <normaloff>:/image/save.jpg</normaloff>:/image/save.jpg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="history_button">
+          <property name="font">
+           <font>
+            <family>SansSerif</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>history</string>
+          </property>
+          <property name="icon">
+           <iconset resource="image.qrc">
+            <normaloff>:/image/document.jpg</normaloff>:/image/document.jpg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pen_button">
+          <property name="font">
+           <font>
+            <family>SansSerif</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>pen</string>
+          </property>
+          <property name="icon">
+           <iconset resource="image.qrc">
+            <normaloff>:/image/drawpen.jpg</normaloff>:/image/drawpen.jpg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="eraser_button">
+          <property name="font">
+           <font>
+            <family>SansSerif</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>eraser</string>
+          </property>
+          <property name="icon">
+           <iconset resource="image.qrc">
+            <normaloff>:/image/eraser.jpg</normaloff>:/image/eraser.jpg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="text_content"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuStart">
+    <property name="title">
+     <string>Start</string>
+    </property>
+    <addaction name="actionsave"/>
+    <addaction name="actiondocument"/>
+    <addaction name="separator"/>
+    <addaction name="actionpen"/>
+    <addaction name="actionerease"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <addaction name="menuStart"/>
+   <addaction name="menuSetting"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+  <action name="actiondocument">
+   <property name="text">
+    <string>document</string>
+   </property>
+  </action>
+  <action name="actionpen">
+   <property name="text">
+    <string>pen</string>
+   </property>
+  </action>
+  <action name="actionerease">
+   <property name="text">
+    <string>erease</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionpen</sender>
+   <signal>triggered()</signal>
+   <receiver>pen_button</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionerease</sender>
+   <signal>triggered()</signal>
+   <receiver>text_content</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

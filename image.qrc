@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>save.jpg</file>
+        <file>document.jpg</file>
+        <file>drawpen.jpg</file>
+        <file>eraser.jpg</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>data.txt</file>
+    </qresource>
+</RCC>
