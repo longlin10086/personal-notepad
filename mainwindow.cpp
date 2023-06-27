@@ -30,11 +30,10 @@ void MainWindow::on_save_button_clicked()
 //        qDebug() << text << "\n";
         return ;
     }else{
+        QTextStream out(&file);
+        out << text << "\n";
         file.close();
     }
-    QTextStream out(&file);
-    out << text << "\n";
-
     ui->text_content->setReadOnly(true);
 }
 
