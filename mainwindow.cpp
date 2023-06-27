@@ -3,6 +3,7 @@
 #include <QFile>
 #include <QFocusEvent>
 #include <QMessageBox>
+#include <QDesktopServices>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -93,9 +94,14 @@ void MainWindow::on_actioneraser_triggered(){
 }
 
 void MainWindow::on_actionshow_more_details_triggered(){
-    qDebug() << "-------------------";
+//    qDebug() << "-------------------";
     QMessageBox msgBox;
     msgBox.setWindowTitle("Setting");
-    msgBox.setText("Wait for more development");
+    msgBox.setInformativeText("Opps!Click OK to continue.");
+    msgBox.setText("Wait for more development.");
     msgBox.exec();
+}
+
+void MainWindow::on_actiongithub_page_triggered(){
+    QDesktopServices::openUrl(QUrl("https://github.com/longlin10086/personal-notepad"));
 }

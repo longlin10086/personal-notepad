@@ -139,6 +139,7 @@
     <property name="title">
      <string>About</string>
     </property>
+    <addaction name="actiongithub_page"/>
    </widget>
    <addaction name="menuStart"/>
    <addaction name="menuSetting"/>
@@ -169,6 +170,11 @@
   <action name="actionshow_more_details">
    <property name="text">
     <string>show more details</string>
+   </property>
+  </action>
+  <action name="actiongithub_page">
+   <property name="text">
+    <string>github_page</string>
    </property>
   </action>
  </widget>

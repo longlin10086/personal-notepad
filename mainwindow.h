@@ -35,6 +35,8 @@ private slots:
 
     void on_actionshow_more_details_triggered();
 
+    void on_actiongithub_page_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
