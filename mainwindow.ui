@@ -116,7 +116,7 @@
    </property>
    <widget class="QMenu" name="menuStart">
     <property name="title">
-     <string>Start</string>
+     <string>Start(&amp;A)</string>
     </property>
     <addaction name="actionsave"/>
     <addaction name="actiondocument"/>
@@ -149,22 +149,22 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionsave">
    <property name="text">
-    <string>save</string>
+    <string>save(&amp;S)</string>
    </property>
   </action>
   <action name="actiondocument">
    <property name="text">
-    <string>document</string>
+    <string>document(&amp;D)</string>
    </property>
   </action>
   <action name="actionpen">
    <property name="text">
-    <string>pen</string>
+    <string>pen(&amp;P)</string>
    </property>
   </action>
   <action name="actionerease">
    <property name="text">
-    <string>erease</string>
+    <string>erease(&amp;E)</string>
    </property>
   </action>
   <action name="actionshow_more_details">
