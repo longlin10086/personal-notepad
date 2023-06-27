@@ -46,6 +46,7 @@ void MainWindow::on_pen_button_clicked()
         QTextCursor cursor = ui->text_content->textCursor();
 //        cursor.insertText("hhhh");
         cursor.movePosition(QTextCursor::End);
+        ui->text_content->setTextCursor(cursor);
         ui->text_content->setFocus();
         ui->text_content->ensureCursorVisible();
     }
@@ -66,10 +67,14 @@ void MainWindow::on_history_button_clicked()
 {
     if(!ui->text_content->isReadOnly()){
         QFile file("D:\\Documents\\qt project\\notepad_v1\\data.txt");
+        QString text;
         if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
             QTextStream in(&file);
-            QString text = in.readAll();
+            text = in.readAll();
             ui->text_content->setPlainText(text);
+            QTextCursor cursor = ui->text_content->textCursor();
+            cursor.movePosition(QTextCursor::End);
+            ui->text_content->setTextCursor(cursor);
             file.close();
         }
         ui->text_content->setFocus();
